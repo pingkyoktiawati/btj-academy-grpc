@@ -1,0 +1,60 @@
+// Define the syntax for protocol buffers version 3
+syntax = "proto3";
+
+// Specify the Go package for generated code
+option go_package = "calculator/calcpb";
+
+// Define the package for the protocol buffers
+package calc;
+
+// Define the Calculator service with four RPC methods
+service Calculator {
+    rpc Add(AddRequest) returns (AddResponse) {}  // addition
+    rpc Subtract(SubtractRequest) returns (SubtractResponse) {}  //subtraction
+    rpc Multiply(MultiplyRequest) returns (MultiplyResponse) {}  //multiplication
+    rpc Divide(DivideRequest) returns (DivideResponse) {}  //division
+}
+
+// A request message containing number from the user for addition operation
+message AddRequest {
+    int32 n1 = 1;
+    int32 n2 = 2;
+}
+
+// A response message containing the result of the addition
+message AddResponse {
+    int32 r = 1;
+}
+
+// A request message containing number from the user for subtraction operation
+message SubtractRequest {
+    int32 n1 = 1;
+    int32 n2 = 2;
+}
+
+// A response message containing the result of the subtraction
+message SubtractResponse {
+    int32 r = 1;
+}
+
+// A request message containing number from the user for multiplication operation
+message MultiplyRequest {
+    int32 n1 = 1;
+    int32 n2 = 2;
+}
+
+// A response message containing the result of the multiplication
+message MultiplyResponse {
+    int32 r = 1;
+}
+
+// A request message containing number from the user for division operation
+message DivideRequest {
+    int32 n1 = 1;
+    int32 n2 = 2;
+}
+
+// A response message containing the result of the division
+message DivideResponse {
+    float r = 1;
+}
