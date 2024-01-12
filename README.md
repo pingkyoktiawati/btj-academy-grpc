@@ -31,7 +31,7 @@ Membuat project simple calculator dengan Golang di Windows.
 ## Setup Project gRPC
 
 1. **Inisialisasi modul Go**:
-2. ```
+   ```
    go mod init github.com/pingkyoktiawati/grpc-calculator
    ```
    Ini akan membuat file `go.mod` secara otomatis.
@@ -44,7 +44,7 @@ Membuat project simple calculator dengan Golang di Windows.
 
    Jalankan command `go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28` untuk menghasilkan kode Go dari file proto dan command `go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2` untuk menghasilkan kode Go yang mendukung implementasi server dan klien untuk layanan gRPC yang didefinisikan dalam file proto.
 
-5. **Buat file proto**:
+4. **Buat file proto**:
 
    Buat direktori `calculator/calcpb` lalu buat file `calc.proto` dalam direktori tersebut.
 
