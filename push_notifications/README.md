@@ -83,11 +83,11 @@ Menjalankan Go server dan Python client menggunakan VSCode.
    
    a) Pada terminal pertama, run Go server dengan command 
       
-      `go run main.go`
+      ```go run main.go```
    
    b) Pada terminal kedua, aktifkan virtual environment terlebih dahulu (`venv/Scripts/activate`) lalu run Python server dengan command 
       
-      `python main.py`
+      ```python main.py```
 
 
 ## Test Case
