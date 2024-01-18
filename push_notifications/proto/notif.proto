@@ -1,0 +1,34 @@
+// Define the syntax for protocol buffers version 3
+syntax = "proto3";
+
+// Specify the Go package for generated code
+option go_package = "./proto";
+
+// Define the package for the protocol buffers
+package notif;
+
+// Define the Notification service
+service NotifService {
+    rpc GetQuote (QuoteRequest) returns (stream QuoteResponse);
+    rpc GenerateImages(ImagesRequest) returns (stream ImagesResponse);
+}
+
+// A request message containing number of quote
+message QuoteRequest {
+    int32 num_quote = 1;
+}
+
+// A response message containing the result of the quote
+message QuoteResponse {
+    string generated_quote = 1;
+}
+
+// A request message containing number of image
+message ImagesRequest {
+    int32 num_image = 1;
+}
+
+// A response message containing the result of the image
+  message ImagesResponse {
+    string generated_image_urls = 1;
+}
